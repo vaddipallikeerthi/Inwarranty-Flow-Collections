@@ -38,6 +38,7 @@ jobs:
 
 
       - name: Newman report
+        if: always() # ensure that the archive executed irrespective of whether the previous step has passed or not
         uses: actions/upload-artifact@v4.6.2
         with:
           name: Newman Report
